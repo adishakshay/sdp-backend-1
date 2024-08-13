@@ -4,5 +4,5 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/quizspring-0.0.1-SNAPSHOT.jar quizapp.jar
-EXPOSE 7777
+EXPOSE 8082
 ENTRYPOINT ["java","-jar","quizapp.jar"]
